@@ -153,7 +153,7 @@
   }
   
   .split-section.green {
-    background-color: #bddac2;
+    background-color: #513622;
   }
   
   .split-section.white {
@@ -161,18 +161,27 @@
   }
   
   .split-section.green2 {
-    background-color: #bddac2;
+    background-color: #513622;
   }
   
   .split-section.white2 {
     background-color: white;
   }
   
+  .split-section.green3 {
+    background-color: #513622;
+  }
+  
+  .split-section.white3 {
+    background-color: white;
+  }
   /* Billede styles */
   .image1,
   .image2,
   .image3,
-  .image4{
+  .image4,
+  .image5,
+  .image6{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -196,24 +205,37 @@
   }
   
   .image4 {
-    background-image: url('Images/Chicken.webp');
+    background-image: url('Images/Chicken.jpg');
   }
-  /* Tekstformatering */
+
+  .image5 {
+    background-image: url('Images/Ember.png');
+  }
+  
+  .image6 {
+    background-image: url('Images/Chicken.jpg');
+  }
+
+  /* Tekst styling */
   .split-section.green h2,
   .split-section.white h2,
   .split-section.green2 h2,
-  .split-section.white2 h2 {
+  .split-section.white2 h2, 
+  .split-section.green3 h2,
+  .split-section.white3 h2{
     font-family: 'Montserrat', serif;
-    font-size: 4rem;
+    font-size: 3.8rem;
     margin-bottom: -4rem;
   }
   
   .split-section.green p,
   .split-section.white p,
-  .split-section.green2 p
-  .split-section.white2 p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+  .split-section.green2 p,
+  .split-section.white2 p,
+  .split-section.green3 p,
+  .split-section.white3 p {
+    font-family: 'Montserrat', serif;
+    font-size: 1.3rem;
     margin-top: 1rem;
   }
   
@@ -225,7 +247,8 @@
   
   .split-section.white h2,
   .split-section.white p {
-    color: #bddac2;
+    color: #513622;
+  
   }
   
   .split-section.green2 h2,
@@ -235,15 +258,26 @@
   
   .split-section.white2 h2,
   .split-section.white2 p {
-    color: #bddac2;
+    color: #513622;
   }
   
+  .split-section.green3 h2,
+  .split-section.green3 p {
+    color: white;
+  }
+  
+  .split-section.white3 h2,
+  .split-section.white3 p {
+    color: #513622;
+  }
+  
+
 
 /* Footer styles */
 
   footer{
     display: flex;
-    background-color:#bddac2 ;
+    background-color:#513622 ;
     color: white;
     justify-content: space-evenly;
     padding: 2rem;
@@ -300,6 +334,51 @@ footer form button {
 
 
 @media (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      .split-section.reverse {
+        flex-direction: column;
+      }
+    
+      .split-section .text,
+      .split-section .image {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+      }
+    
+      .split-section .image {
+        min-height: 800px;
+        margin-bottom: 1rem;
+      }
+    
+      .split-section h2 {
+        font-size: 2rem;
+      }
+    
+      .split-section p {
+        font-size: 1.1rem;
+      }
+    
+      .text h1 {
+        font-size: 2.5rem;
+        margin-top: 6rem;
+        padding: 1rem;
+      }
+    
+      .logo {
+        width: 80px;
+        margin-top: -1rem;
+      }
+    
+      .burger-icon {
+        width: 50px;
+        height: 50px;
+      }
+    
     footer{
         flex-direction: column;
         align-items: center;

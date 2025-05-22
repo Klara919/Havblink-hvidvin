@@ -119,12 +119,177 @@
   }
 
 
+/* SPLIT SECTIONS */
+.split-section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .split-section.reverse {
+    flex-direction: row-reverse;
+  }
+  
 
+  .split-section .image{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40rem;
+  }
 
+  .image {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+  }
 
+  .image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .text-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', serif;
+    background: rgba(0, 0, 0, 0.3); /* Halvtransparent baggrund */
+    border-radius: 8px;
+    text-decoration: none;
+  }
 
+  .image-wrapper a {
+    text-decoration: none;
+    color: inherit; /* Beholder tekstfarven fra .text-overlay */
+    display: block;
+  }
 
+  .image-wrapper a:hover .text-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Mørkere baggrund ved hover */
+  }
+  
+  .split-section.green .text-overlay {
+    color: white;
+  }
+  
+  .split-section.green {
+    background-color: #bddac2;
+  }
+  
+  .split-section.white {
+    background-color: white;
+  }
+  
+  .split-section.brown {
+    background-color: #513622;
+  }
 
+  /* Billede styles */
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4rem;
+    width: 100%;
+    min-height: 40rem;
+    margin: 2rem;
+   
+  }
+  
+  .image1 {
+    background-image: url('Images/Vineventyr.png');
+    
+  }
+  
+  .image2 {
+    background-image: url('Images/Picnic.jpg');
+  }
+  
+  .image3 {
+    background-image: url('Images/Reserve.png');
+  }
+  
+  .image4 {
+    background-image: url('Images/Chicken.jpg');
+  }
+
+  .image5 {
+    background-image: url('Images/Ember.png');
+  }
+  
+  .image6 {
+    background-image: url('Images/Chicken.jpg');
+  }
+
+  /* Tekst styling */
+  .split-section.green h2,
+  .split-section.white h2,
+  .split-section.brown h2{
+    font-family: 'Montserrat', serif;
+    font-size: 2rem;
+    color: white
+   
+  }
+  
+  .split-section.green p,
+  .split-section.white p,
+  .split-section.brown p {
+    font-family: 'Montserrat', serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+  }
+  
+#Ekstra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #bddac2;
+    pointer-events: none;
+
+  }
+
+#Ekstra h2{
+    font-family: 'Montserrat', serif;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#Ekstra p{
+    font-family: 'Montserrat', serif;
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+    /* Footer */
 
   footer{
     display: flex;
@@ -185,6 +350,53 @@
 
 
   @media (max-width: 768px) {
+
+    .split-section {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      .split-section.reverse {
+        flex-direction: column;
+      }
+    
+      .split-section .text,
+      .split-section .image {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+      }
+    
+      .split-section .image {
+        min-height: 800px;
+        margin-bottom: 1rem;
+      }
+    
+      .split-section h2 {
+        font-size: 2rem;
+      }
+    
+      .split-section p {
+        font-size: 1.1rem;
+      }
+    
+
+    .text h1 {
+        font-size: 2.5rem;
+        margin-top: 6rem;
+        padding: 1rem;
+      }
+    
+      .logo {
+        width: 80px;
+        margin-top: -1rem;
+      }
+    
+      .burger-icon {
+        width: 50px;
+        height: 50px;
+      }
+    
     footer{
         flex-direction: column;
         align-items: center;
