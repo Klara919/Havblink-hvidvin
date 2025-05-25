@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+background-color: #513622;  }
+  
+  #Background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #Background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text h1 {
+    color: white;
+    font-size: 6rem;
+    margin-top: 4rem;
+   font-family: ahsing;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 25px;
+    height: 25px;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    z-index: 2;
+  }
+  
+  /* Dropdown menu */
+  #burger-toggle {
+    display: none;
+  }
+  
+  .burger-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    cursor: pointer;
+  }
+  
+  .burger-icon img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 3;
+  }
+  
+  #burger-toggle:checked + .burger-icon + .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #bddac2;
+  }
+
+
+#Underoverskrift h1 {
+    font-family: ahsing;
+    font-size: 5rem;
+    color: white;
+    margin-top: 4rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .center-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  details {
+    font-family: Montserrat;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.5rem 1rem;
+    width: 100%;
+    max-width: 70rem;
+    cursor: pointer;
+    box-shadow: #ccc 0px 0px 10px;
+    max-height: none;
+    
+  }
+
+
+
+  
+  summary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  /* Tilføj pil */
+  summary::after {
+    content: "▼";
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Drej pil ved åben dropdown */
+  details[open] summary::after {
+    transform: rotate(180deg);
+  }
+
+
+
+  .split-section {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+    gap: 2rem;
+  }
+  
+  
+  .split-section .text,
+  .split-section .quote,
+  .split-section .image,
+  .split-section .content3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+
+  }
+  
+  
+
+  .content {
+    margin-right: 2rem; /* giver afstand under content */
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: column; /* tvinger børn til at ligge lodret */
+    background-color: #bddac2;
+    height: auto; /* så den tilpasser sig indhold */
+    min-height: 20rem; /* hvis du vil bevare minimumshøjde */
+    margin-top: 2rem;
+    margin-left: 4rem;
+    font-style: italic;
+    color: #513622;
+    margin: 2rem 0;
+   
+  }
+  
+  .quote p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-style: normal;
+  }
+  
+  
+  
+  .split-section.white {
+    background-color: white;
+  }
+  
+
+  /* Tekstformatering */
+ .split-section.white{
+    color: #513622;
+    font-family: Montserrat;
+    
+ }
+  
+  .quote {
+    flex: 1;
+    background-color: #bddac2;
+    padding: 1rem;
+    height: 10rem;
+    border-left: 3px solid #bddac2;
+    font-style: italic;
+    margin-left: auto;
+  }
+
+
+.image1, 
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  width: 100%;
+  min-height: 400px;
+  margin: 1rem;
+}
+
+/* Billede tilhørende de danske druer */
+.image1 {
+    background-image: url('Images/Rondo.jpg');
+}
+
+/* Billeder tilhørende de hvide druer */
+.image2 {
+    background-image: url('Images/Chardonnay.jpg');
+}
+
+.image3 {
+    background-image: url('Images/Sauvignon-Blanc.jpg');
+}
+
+.image4 {
+    background-image: url('Images/Riesling.jpg');
+}
+
+/* Billede tilhørende de røde druer */
+
+.image5 {
+  background-image: url('Images/Cabernet-sauvignon.jpg');
+}
+
+.image6 {
+  background-image: url('Images/Merlot.jpg');
+}
+
+.image7 {
+  background-image: url('Images/Pinot-Noir.jpg');
+}
+
+.image8 {
+  background-image: url('Images/Syrah1.jpg');
+}
+
+.image9 {
+  background-image: url('Images/Malbec.jpg');
+}
+
+
+
+.content3 {
+    background-color: #bddac2; 
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #513622;
+  }
+  
+  .content3 h2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .content3 p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+
+
+
+  footer{
+    display: flex;
+    background-color:#513622 ;
+    color: white;
+    justify-content: space-evenly;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    min-height: 200px;
+    
+  
+  }
+  
+  footer a{
+    color: white;
+    text-decoration: none;
+    font-family: montserrat;
+  
+  }
+  
+  footer div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  footer h2 {
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+  
+  footer img {
+    max-width: 2rem;
+  }
+  
+  footer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer form input {
+    margin-bottom: 10px;
+  
+  
+  }
+  
+  footer form button {
+    background-color: White;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+
+  @media (max-width: 768px) {
+    
+    .section {
+          flex-direction: column;
+        }
+    
+    .quote {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+
+    .split-section {
+      flex-direction: column;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+        margin-top: 6rem;
+        padding: 1rem;
+      }
+    
+      .logo {
+        width: 80px;
+        margin-top: -1rem;
+      }
+    
+      .burger-icon {
+        width: 50px;
+        height: 50px;
+      }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    
+    }
+
+    footer div {
+        margin:2rem 0;
+        text-align: center;
+    }
+}

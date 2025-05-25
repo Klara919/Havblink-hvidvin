@@ -44,6 +44,7 @@
     color: white;
     font-size: 6rem;
     margin-top: 4rem;
+    font-family: ahsing;
   }
   
   .logo {
@@ -182,6 +183,8 @@
     display: block;
   }
 
+
+
   .image-wrapper a:hover .text-overlay {
     background: rgba(0, 0, 0, 0.5); /* Mørkere baggrund ved hover */
   }
@@ -229,19 +232,19 @@
   }
   
   .image3 {
-    background-image: url('Images/Reserve.png');
+    background-image: url('Images/Drueplukning.jpg');
   }
   
   .image4 {
-    background-image: url('Images/Chicken.jpg');
+    background-image: url('Images/Cookingclass.png');
   }
 
   .image5 {
-    background-image: url('Images/Ember.png');
+    background-image: url('Images/Solnedgang.jpg');
   }
   
   .image6 {
-    background-image: url('Images/Chicken.jpg');
+    background-image: url('Images/Bare\ et\ par\ timer.jpg');
   }
 
   /* Tekst styling */
@@ -269,9 +272,11 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 6rem;
     background-color: #bddac2;
     pointer-events: none;
+    border: 1rem solid white;
+   
 
   }
 
@@ -280,6 +285,7 @@
     font-size: 4rem;
     color: white;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #Ekstra p{
@@ -289,6 +295,52 @@
     margin-bottom: 1rem;
     text-align: center;
 }
+
+
+/* Fjerner irriterende blå streger under tekst*/
+#Ekstra * {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Button styling */
+#button-container {
+    pointer-events: auto;
+    display: inline-block;
+    border: 2px solid #513622;
+    padding: 0;
+    border-radius: 50rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    background-color: white;
+}
+
+/* Button text styling */
+#button-container a {
+    display: block;
+    padding: 3px 20px;
+    color: #513622;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    user-select: none;
+}
+
+#button-container:hover {
+    background-color: #513622;
+    box-shadow: 0 8px 16px rgba(81, 54, 34, 0.4);
+}
+
+#button-container:hover a {
+    color: white;
+    background-color: transparent;
+}
+
+
     /* Footer */
 
   footer{
